@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
             override fun onClick(position: Int) {
                 val intent = Intent(this@MainActivity, TemplateActivity::class.java)
                 intent.putExtra("ID", ids[position])
+                intent.putExtra("Name",titles[position])
                 startActivity(intent)
             }
         }
