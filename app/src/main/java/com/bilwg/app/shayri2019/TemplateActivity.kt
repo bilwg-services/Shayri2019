@@ -53,6 +53,9 @@ class TemplateActivity : AppCompatActivity() {
         }
 
         val id = intent.getStringExtra("ID")
+        
+        findViewById<TextView>(R.id.textView).text = "${intent.getStringExtra("Name")} Shayri"
+        
         FirebaseFirestore.getInstance().collection("Category").document(id).collection("Shayri").get().addOnCompleteListener {
             if (it.isSuccessful) {
                 for (doc in it.result!!) {
