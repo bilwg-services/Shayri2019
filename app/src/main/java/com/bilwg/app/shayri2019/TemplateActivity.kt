@@ -1,5 +1,8 @@
+@file:Suppress("SpellCheckingInspection")
+
 package com.bilwg.app.shayri2019
 
+import android.app.ProgressDialog
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
@@ -53,9 +56,9 @@ class TemplateActivity : AppCompatActivity() {
         }
 
         val id = intent.getStringExtra("ID")
+        val title = "${intent.getStringExtra("Name")} Shayri"
         
-        findViewById<TextView>(R.id.textView).text = "${intent.getStringExtra("Name")} Shayri"
-        
+        findViewById<TextView>(R.id.textView).text = title
         FirebaseFirestore.getInstance().collection("Category").document(id).collection("Shayri").get().addOnCompleteListener {
             if (it.isSuccessful) {
                 for (doc in it.result!!) {

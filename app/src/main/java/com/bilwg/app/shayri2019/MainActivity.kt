@@ -1,5 +1,6 @@
 package com.bilwg.app.shayri2019
 
+import android.app.ProgressDialog
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -15,12 +16,18 @@ class MainActivity : AppCompatActivity() {
     private val ids = ArrayList<String>()
 
     private lateinit var adapter: MainAdapter
+    private lateinit var progressDialog:ProgressDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE)
         supportActionBar!!.hide()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        progressDialog = ProgressDialog(this)
+        progressDialog.setTitle("Loading...")
+        progressDialog.setMessage("We are collecting shayries for you..")
+        progressDialog.show()
 
         adapter = MainAdapter(titles, this)
         adapter.listner = object : MainAdapter.onCardClick {
@@ -37,6 +44,7 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
 
         FirebaseFirestore.getInstance().collection("Category").get().addOnCompleteListener {
+            progressDialog.dismiss()
             if (it.isSuccessful) {
                 for (doc in it.result!!) {
                     ids.add(doc.id)
