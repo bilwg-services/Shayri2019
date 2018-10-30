@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.bilwg.app.shayri2019">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -9,9 +10,9 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,19 +20,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".friendship" />
-        <activity android:name=".love" />
-        <activity android:name=".sad" />
-        <activity android:name=".funny" />
-        <activity android:name=".best" />
-        <activity android:name=".dbs" />
-        <activity android:name=".skm" />
-
         <meta-data
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"
             android:value="true" />
-
-        <activity android:name=".TemplateActivity"></activity>
+        <activity android:name=".TemplateActivity"/>
     </application>
 
 </manifest>
