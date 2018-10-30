@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient5"
+    tools:context=".TemplateActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:textColor="#ffffff"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Best Shayari "
+        android:background="#3a22d4"
+        android:textSize="30dp"/>
+
+
+    <com.google.android.gms.ads.doubleclick.PublisherAdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/publisherAdView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-9733597647251062/9299365904">
+
+    </com.google.android.gms.ads.doubleclick.PublisherAdView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="338dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="30dp"
+        android:background="@drawable/border_1"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/ShayariView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_margin="5dp"
+            android:background="#ffffff"
+            android:fontFamily=""
+            android:outlineSpotShadowColor="#000000"
+            android:padding="10dp"
+            android:text="Loading..."
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/copy"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/copy" />
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/share"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/share" />
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/whatsapp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/whatsapp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="70dp"
+        android:layout_height="68dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="11dp"
+        android:background="@drawable/back"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/back" />
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="70dp"
+        android:layout_height="68dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="11dp"
+        android:background="@drawable/next"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/next" />
+
+</RelativeLayout>

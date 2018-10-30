@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "836353670634",
+    "firebase_url": "https://shayari-2019.firebaseio.com",
+    "project_id": "shayari-2019",
+    "storage_bucket": "shayari-2019.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:836353670634:android:85b8e8fd2238d4dc",
+        "android_client_info": {
+          "package_name": "com.bilwg.app.shayri2019"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "836353670634-9n9htvt5me4bs9cqeujjpim685vic6pd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bilwg.app.shayri2019",
+            "certificate_hash": "fddbc35a57055cfaeea2d8638b6b4d8b67e73c37"
+          }
+        },
+        {
+          "client_id": "836353670634-ovc0albo61jobaudpgpagr18l5vng1v9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAok1q8gvZLwemeO0juVL7m0yHMYc1ZqBE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "836353670634-ovc0albo61jobaudpgpagr18l5vng1v9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
